@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import { useLocation } from 'react-router';
 import useAuth from '../hooks/useAuth';
-
+import pic from '../../images/image 1.png'
 
 
 
@@ -53,6 +53,9 @@ const Login = () => {
            
                 <Container>
                     <Grid container spacing={2}>
+                        <Grid item xs={12} md={6}>
+                            <img src={pic} alt="" width='100%' />
+                        </Grid>
                         <Grid sx={{ mt: 8 }} item xs={12} md={6}>
                             <Typography className="login-heading" variant="h5" gutterBottom>
                             Welcome back
@@ -94,7 +97,8 @@ const Login = () => {
                                 <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Login In Now</Button>
                                 <br />
 
-                                <NavLink style={{ textDecoration: 'none', textAlign: 'center' }} to="/register"> <Button variant="text">New User? Please Register</Button></NavLink>
+                                <NavLink style={{ textDecoration: 'none', textAlign: 'center' }} to="/register"> <br />
+                                <Button variant="text">New User? Please Register</Button></NavLink><br />
                                 <Button variant="contained" onClick={handleGoogleSignIn}>Sign In With Google</Button>
 
 

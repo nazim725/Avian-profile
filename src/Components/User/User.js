@@ -28,7 +28,7 @@ const User = (props) => {
         const newUser = { name, img, email,phone,city,status}
 
 
-        fetch('http://localhost:5000/hiredUsers', {
+        fetch('https://infinite-crag-63538.herokuapp.com/hiredUsers', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

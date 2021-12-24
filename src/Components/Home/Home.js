@@ -25,7 +25,7 @@ const Home = () => {
             </div>
 
             <div style={{display:'flex',justifyContent:'center',margin:'18px 0',}}>
-            <NavLink style={{textDecoration:'none'}} to="/explore"> <Button  variant="contained">Explore Products</Button></NavLink>
+            <NavLink style={{textDecoration:'none'}} to="/hiredProfile"> <Button  variant="contained">Hired Employee</Button></NavLink>
             </div>
 
 

@@ -32,7 +32,9 @@ const Profile = (props) => {
                             {city}
                         </Typography>
                     </CardContent>
-                    <Link style={{ textDecoration: 'none' }} to={`/updateProfile/${_id}`}><Button variant="contained">Edit Profile</Button></Link>
+                    <Link style={{ textDecoration: 'none' }} to={`/updateProfile/${_id}`}><Button variant="contained">Edit Profile</Button></Link> 
+                  
+                    <Button style={{marginLeft:'10px'}} onClick={() =>props.handleDeleteProfile(_id)} variant='contained'>Delete Profile</Button>
 
                 </CardActionArea>
             </Card>

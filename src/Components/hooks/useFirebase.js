@@ -41,7 +41,7 @@ const useFirebase = () => {
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((result) => {
-                const destination = location?.state?.from || '/';
+                const destination = location?.state?.from || '/home';
                 history.replace(destination);
                 setAuthError('');
             })
@@ -97,7 +97,7 @@ const useFirebase = () => {
 
     // load admin for admin
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://infinite-crag-63538.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -106,7 +106,7 @@ const useFirebase = () => {
     // save user into database
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('http://localhost:5000/users', {
+        fetch('https://infinite-crag-63538.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'

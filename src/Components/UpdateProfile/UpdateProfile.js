@@ -11,7 +11,7 @@ const UpdateProfile = () => {
     const { profileId } = useParams();
     const [profile, setProfile] = useState({});
 
-    const url = `http://localhost:5000/hiredUsers/${profileId}`
+    const url = `https://infinite-crag-63538.herokuapp.com/hiredUsers/${profileId}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -22,7 +22,7 @@ const UpdateProfile = () => {
 
 
     const handleUpdateProfile = e => {
-        const url = `http://localhost:5000/hiredUsers/${profileId}`;
+        const url = `https://infinite-crag-63538.herokuapp.com/hiredUsers/${profileId}`;
         console.log(url)
         fetch(url, {
             method: 'PUT',
