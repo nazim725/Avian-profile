@@ -5,7 +5,7 @@ const HiredProfile = () => {
 
     const [hiredProfiles, setHiredProfiles] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/hiredUsers')
+        fetch('https://infinite-crag-63538.herokuapp.com/hiredUsers')
             .then(res => res.json())
             .then(data => {
                 setHiredProfiles(data)
